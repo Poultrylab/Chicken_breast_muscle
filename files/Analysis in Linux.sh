@@ -20,3 +20,9 @@ do
 
 stringtie -p 20 -e -G $gtf  -o $out/${file}.gtf  -A $out/${file}.tsv $input/${file}.sorted.bam
 done
+
+
+#stringtie-2.1.4
+
+python $stringtie/prepDE.py -i file_list.txt -g $out/zong_gene_count_matrix.csv -t $out/zong_transcript_count_matrix.csv
+
